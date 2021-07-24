@@ -9,6 +9,7 @@ export class UserProfile {
     public html_url:string,
     public followers:string,
     public following:string,
+    public created_at: Date,
 
     )
     {

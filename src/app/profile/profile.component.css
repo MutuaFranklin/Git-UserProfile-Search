@@ -95,6 +95,11 @@ input::placeholder{
   color: grey;
 }
 
+.date-created{
+  font-size: 14px;
+
+}
+
 .location{
   display: flex;
   font-size: 14px;
@@ -105,6 +110,7 @@ input::placeholder{
   background-color: rgba(190, 125, 40, 0.7);
   border: 1px solid gray;
   font-size: 13px;
+
 
 }
 

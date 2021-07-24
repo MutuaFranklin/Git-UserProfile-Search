@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, NgForm } from '@angular/forms';
 import { Repositories } from '../models/repositories';
 import { UserProfile } from '../models/user-profile';
 import { UserServiceService } from '../services/user-service.service';
@@ -13,14 +14,20 @@ export class ProfileComponent implements OnInit {
   user!:UserProfile
   repo!:Repositories
   searchName!: string
+  // form!: FormGroup
 
 
   searchResults(searchName: string){
     if (searchName !== ''){
-      console.log(searchName)
       this.userService.getUserData(searchName);
       this.repoService.getRepoInfo(searchName);
+      // console.log(searchName)
+
     }
+  }
+
+  submitQuery(form: NgForm){
+    // this.form.reset()
   }
 
 
@@ -30,6 +37,7 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     this.user = this.userService.user;
     this.repo = this.userService.repo;
-    console.log(this.repo)  }
+    // console.log(this.repo)
+   }
 
 }

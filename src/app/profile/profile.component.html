@@ -1,7 +1,8 @@
 <div class="container-fluid main-page">
+  <ng-progress></ng-progress>
   <nav class="navbar navbar-light bg-light mb-3 ">
     <div class="container-fluid">
-      <form class="d-flex m-2 userForm">
+      <form class="d-flex m-2 userForm" #searchForm = 'ngForm' (ngSubmit) ='submitQuery(searchForm); searchForm.resetForm({})'>
         <input type="text" class="form-control" name="searchName"  required placeholder="Search a git user" id="searchName" #searchName (keyup.enter)= "searchResults(searchName.value)" >
         <!-- <button type="submit" class="btn btn-success" (click) = "searchResults(searchName.value)">Search</button> -->
       </form>
@@ -12,7 +13,7 @@
   <div class="row">
     <div class="col-md-5 profile">
       <div class="image">
-        <img src="{{user.avatar_url}}" alt="">
+        <img src="{{user.avatar_url}}" appImageTransform alt="">
       </div>
       <div class="username">
         <h4>{{user.name}}</h4>
@@ -28,6 +29,9 @@
         <span class="followers ms-1 fw-bold">{{user.followers}}</span>
         <p class="ms-1 p">followers.</p>
 
+      </div>
+      <div class="date-created">
+        <p>created: {{user.created_at|dateCounter}}</p>
       </div>
       <div class="location">
         <i class="fa fa-map-marker-alt m-1"></i>

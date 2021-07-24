@@ -14,13 +14,16 @@ export class UserServiceService {
 
   user: UserProfile;
 
-  private userName !:string;
   items!:any;
+
+  private searchName !:string;
+
 
 
   constructor(private http: HttpClient) {
-    this.user = new UserProfile(" ", " ", " ", " ", " ", 0, " ", "","");
+    this.user = new UserProfile(" ", " ", " ", " ", " ", 0, " ", "","", new Date());
     this.repo = new Repositories(" ", " ", " ", " ", "");
+    this.searchName = 'MutuaFranklin';
    }
 
 
@@ -34,7 +37,9 @@ export class UserServiceService {
       public_repos: number;
       html_url: string;
       following: string;
-      followers:string
+      followers:string;
+      created_at: Date;
+
 
     }
     const promise = new Promise<void>((resolve, reject) => {
@@ -51,12 +56,11 @@ export class UserServiceService {
           this.user.html_url = profile.html_url;
           this.user.following = profile.following;
           this.user.followers = profile.followers;
+          this.user.created_at = profile.created_at;
 
 
 
-
-
-          console.log(profile);
+          // console.log(profile);
 
           resolve();
         });
@@ -65,9 +69,9 @@ export class UserServiceService {
 
   }
 
-   // updateProfile(searchName:string){
-  // 	this.searchName = searchName;
-  // }
+  updateProfile(searchName:string){
+  	this.searchName = searchName;
+  }
 
 
   getRepoInfo(searchName:string) {
@@ -82,7 +86,7 @@ export class UserServiceService {
       .get<ApiResponse>(environment.apiUrl + searchName + environment.apiRepokey)
       .subscribe(response => {
         this.items = response;
-        console.log(response)
+        // console.log(response)
 
       });
   }
