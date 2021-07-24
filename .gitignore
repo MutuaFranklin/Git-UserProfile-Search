@@ -43,3 +43,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# API url for practice but doesnt work on production since the url will be hidden hence error
+environment.ts
