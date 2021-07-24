@@ -1,0 +1,70 @@
+<div class="container-fluid main-page">
+  <nav class="navbar navbar-light bg-light mb-3 ">
+    <div class="container-fluid">
+      <form class="d-flex m-2 userForm">
+        <input type="text" class="form-control" name="searchName"  required placeholder="Search a git user" id="searchName" #searchName (keyup.enter)= "searchResults(searchName.value)" >
+        <!-- <button type="submit" class="btn btn-success" (click) = "searchResults(searchName.value)">Search</button> -->
+      </form>
+      <a class="navbar-brand">GitUserSearch App</a>
+    </div>
+  </nav>
+
+  <div class="row">
+    <div class="col-md-5 profile">
+      <div class="image">
+        <img src="{{user.avatar_url}}" alt="">
+      </div>
+      <div class="username">
+        <h4>{{user.name}}</h4>
+        <p>{{user.login}}</p>
+      </div>
+      <div class="bio">
+        <p>{{user.bio}}</p>
+      </div>
+      <div class="follow">
+        <i class="fa fa-users"></i>
+        <span class="following ms-1 fw-bold">{{user.following}}</span>
+        <p class="ms-1 p">following.</p>
+        <span class="followers ms-1 fw-bold">{{user.followers}}</span>
+        <p class="ms-1 p">followers.</p>
+
+      </div>
+      <div class="location">
+        <i class="fa fa-map-marker-alt m-1"></i>
+        <p>{{user.location}}</p>
+      </div>
+     <a href="{{user.html_url}}" target="_blank"><button type="button" class="btn btn-warning profilebtn">View profile on Github</button></a>
+
+    </div>
+    <div class=" col-md-7 repo">
+      <div class="header">
+        <form class="d-flex repoForm">
+          <input type="text" class="form-control" name="searchName"  required placeholder="Search a user repository" id="searchName" #searchName (keyup.enter)= "searchResults(searchName.value)" >
+          <!-- <button type="submit" class="btn btn-success" (click) = "searchResults(searchName.value)">Search</button> -->
+        </form>
+        <i class="fa fa-registered m-1 ms-2"></i>
+        <p class="r m-1">Repositories</p>
+        <span class="repo-total m-1">{{user.public_repos}}</span>
+
+      </div>
+
+      <div class="repo-details" *ngFor='let repo of repoService.items ; let i = index'>
+        <div class="repo-title">
+          <p>{{repoService.items[i].name}}</p>
+          <a href="{{repoService.items[i].html_url}}" target="_blank"><button type="button" class="btn btn-warning repobtn">View project repo on Github</button></a>
+        </div>
+        <div class="repo-description">
+          <p> {{repoService.items[i].description}}</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+

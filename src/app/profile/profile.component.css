@@ -1,0 +1,158 @@
+.main-page{
+  height: auto;
+  /* background-color: rgb(20, 2, 2); */
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnXVzukgaGqVrr3KbG8RiCwhGOPUetvlqc9w&usqp=CAU);
+  background-size: contain;
+  color: white;
+}
+
+
+.navbar{
+  background: transparent !important;
+  /* background-color: rgb(137, 100, 224) !important; */
+  color: aliceblue;
+  border-bottom: 1px solid rgb(90, 88, 88);
+}
+
+.navbar-brand{
+  color: rgba(190, 125, 40);
+  font-weight: bold;
+  font-size: 18px;
+
+}
+
+.navbar-brand:hover{
+  color: #0c7eaf;
+}
+
+.btn{
+  background-color: #020c22;
+  border: 1px solid white;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn:hover{
+  background-color: #1b1a46;
+}
+
+.userForm{
+  width: 15%;
+  font-size: 12px;
+}
+
+input{
+  border: 2px solid #021a24;
+
+}
+
+input::placeholder{
+  font-weight: 600;
+  font-size: 13px;
+
+}
+
+.row{
+  display: flex;
+  margin-top: 30px;
+}
+
+
+.image img{
+  height: 300px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.username{
+  margin-top: 10px;
+  text-align: center;
+}
+
+.bio{
+  /* background-color: rgb(82, 77, 85, 0.5); */
+  width: 50%;
+  text-align: center;
+}
+
+.follow{
+  display: flex;
+  font-size: 14px;
+}
+
+.fa{
+  margin: 2px;
+}
+
+.p{
+  color: grey;
+}
+
+.location{
+  display: flex;
+  font-size: 14px;
+
+}
+
+.profilebtn{
+  background-color: rgba(190, 125, 40, 0.7);
+  border: 1px solid gray;
+  font-size: 13px;
+
+}
+
+.repoForm{
+  width: 70%;
+}
+.header{
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+}
+
+.repo-total{
+  border-radius: 30%;
+  width: 30px;
+  background-color: grey;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.repo-details{
+  width: 86%;
+  margin-top: 20px;
+  border: 1px solid rgb(90, 88, 88);
+  line-height: 2;
+  margin-bottom: 20px;
+
+}
+.repo-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: bold;
+  background-color: rgba(82, 69, 90, 0.5);
+}
+.repo-title p{
+  margin-left: 5px;
+}
+.repobtn{
+  margin: 6px;
+  background-color: rgba(233, 134, 4, 0.5);
+  border: 1px solid gray;
+  font-size: 14px;
+  font-weight:lighter;
+}
+
+.repo-description{
+  margin: 5px;
+
+}
