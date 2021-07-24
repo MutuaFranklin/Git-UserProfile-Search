@@ -50,14 +50,28 @@ export class ProfileComponent implements OnInit {
     this.user = this.userService.user;
     this.repo = this.userService.repo;
     // console.log(this.repo)
-    $('.userForm').on('click', function () {
+    $('.userForm .userSearchBtn').on('click', function () {
       $('.userForm').find('input').val('');
-     
+
+      if (!$(".userForm input#searchName").val()){
+        alert("Search username required!")
+        $(".validate").fadeIn(1000);
+
+      }
+      else{
+        // alert("Search username required!")
+        $(".validate").fadeOut();
+
+      }
 
 
-      // $('#addForm').find('input:number').val('');
 
-      });
-    }
+    });
+
+
+
+
+
+  }
 
 }

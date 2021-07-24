@@ -16,7 +16,7 @@ export class UserServiceService {
 
   items!:any;
 
-  private searchName !:string;
+  public searchName !:string;
 
 
 

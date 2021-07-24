@@ -3,11 +3,12 @@
   <nav class="navbar navbar-light bg-light mb-3 ">
     <div class="container-fluid">
       <form class="d-flex m-2 userForm" (formGroup)="searchForm">
-        <input type="text" class="form-control" name="searchName"    required placeholder="Search a git user" id="searchName" #searchName (keyup.enter)= "searchResults(searchName.value)" >
-        <!-- <div [hidden]="searchName.valid || searchName.pristine" class="alert alert-danger">
-          <p>Name is required</p>
-        </div> -->
-        <button type="submit" class="btn btn-success" (click) = "searchResults(searchName.value);"  (click)="clearForm()">Search</button>
+        <input type="text" class="form-control" name="searchName" required placeholder="Search a git user" id="searchName" #searchName (keyup.enter)= "searchResults(searchName.value)" >
+
+        <button type="submit" class="btn userSearchBtn" (click) = "searchResults(searchName.value);"  (click)="clearForm()">Search</button>
+        <div class="validate">
+          <p>Enter the search username !!</p>
+        </div>
       </form>
       <a class="navbar-brand">GitUserSearch App</a>
     </div>

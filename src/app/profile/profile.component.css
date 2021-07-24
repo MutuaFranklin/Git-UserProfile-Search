@@ -31,19 +31,22 @@
   color: white;
   font-size: 14px;
   font-weight: 600;
+  margin: 1px;
 }
 
-.btn:hover{
-  background-color: #1b1a46;
+.userSearchBtn:hover{
+  background-color: rgba(190, 125, 40, 0.7);
+
 }
 
 .userForm{
-  width: 15%;
+  width: 28%;
   font-size: 12px;
 }
 
-input{
+.userForm input{
   border: 2px solid #021a24;
+  width: 50%;
 
 }
 
@@ -51,6 +54,15 @@ input::placeholder{
   font-weight: 600;
   font-size: 13px;
 
+}
+.validate{
+  display: flex;
+  padding-top: 12px;
+  color: red;
+  font-weight: bold;
+  margin-left:5px ;
+  height: auto;
+  display: none;
 }
 
 .row{
