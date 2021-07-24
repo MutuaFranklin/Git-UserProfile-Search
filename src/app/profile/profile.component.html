@@ -2,9 +2,12 @@
   <ng-progress></ng-progress>
   <nav class="navbar navbar-light bg-light mb-3 ">
     <div class="container-fluid">
-      <form class="d-flex m-2 userForm" #searchForm = 'ngForm' (ngSubmit) ='submitQuery(searchForm); searchForm.resetForm({})'>
-        <input type="text" class="form-control" name="searchName"  required placeholder="Search a git user" id="searchName" #searchName (keyup.enter)= "searchResults(searchName.value)" >
-        <!-- <button type="submit" class="btn btn-success" (click) = "searchResults(searchName.value)">Search</button> -->
+      <form class="d-flex m-2 userForm" (formGroup)="searchForm">
+        <input type="text" class="form-control" name="searchName"    required placeholder="Search a git user" id="searchName" #searchName (keyup.enter)= "searchResults(searchName.value)" >
+        <!-- <div [hidden]="searchName.valid || searchName.pristine" class="alert alert-danger">
+          <p>Name is required</p>
+        </div> -->
+        <button type="submit" class="btn btn-success" (click) = "searchResults(searchName.value);"  (click)="clearForm()">Search</button>
       </form>
       <a class="navbar-brand">GitUserSearch App</a>
     </div>
@@ -13,7 +16,7 @@
   <div class="row">
     <div class="col-md-5 profile">
       <div class="image">
-        <img src="{{user.avatar_url}}" appImageTransform alt="">
+        <img src="{{user.avatar_url}}" appCursorPointer alt="">
       </div>
       <div class="username">
         <h4>{{user.name}}</h4>
@@ -31,7 +34,7 @@
 
       </div>
       <div class="date-created">
-        <p>created: {{user.created_at|dateCounter}}</p>
+        <p>created at {{user.created_at|date}}</p>
       </div>
       <div class="location">
         <i class="fa fa-map-marker-alt m-1"></i>
@@ -53,7 +56,7 @@
       </div>
 
       <div class="repo-details" *ngFor='let repo of repoService.items ; let i = index'>
-        <div class="repo-title">
+        <div class="repo-title" appBackgroundColor>
           <p>{{repoService.items[i].name}}</p>
           <a href="{{repoService.items[i].html_url}}" target="_blank"><button type="button" class="btn btn-warning repobtn">View project repo on Github</button></a>
         </div>

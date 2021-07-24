@@ -10,6 +10,8 @@ import { ImageTransformDirective } from './directives/image-transform.directive'
 import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { DateCounterPipe } from './date-counter.pipe';
+import { CursorPointerDirective } from './directives/cursor-pointer.directive';
+import { BackgroundColorDirective } from './directives/background-color.directive';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { DateCounterPipe } from './date-counter.pipe';
     ProfileComponent,
     ImageTransformDirective,
     DateCounterPipe,
+    CursorPointerDirective,
+    BackgroundColorDirective,
   ],
   imports: [
     BrowserModule,

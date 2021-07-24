@@ -9,17 +9,18 @@ export class ImageTransformDirective {
   constructor(private el: ElementRef) {}
   @HostListener('mouseenter') onMouseEnter() {
 
-    this.cursor('pointer');
+    this.transform('scale(1.1)');
   }
 
   @HostListener('mouseleave') onMouseLeave() {
-    this.cursor('none');
+    this.transform('none');
+
   }
 
-  private cursor(action: string) {
-    this.el.nativeElement.style.Cursor = action;
-  }
+  private transform(action: string) {
+    this.el.nativeElement.style.transform = action;
 
+  }
 }
 
     // this.elem.nativeElement.style.transform='scale(1.2)';

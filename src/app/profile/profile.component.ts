@@ -4,6 +4,7 @@ import { FormGroup, NgForm } from '@angular/forms';
 import { Repositories } from '../models/repositories';
 import { UserProfile } from '../models/user-profile';
 import { UserServiceService } from '../services/user-service.service';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-profile',
@@ -14,7 +15,7 @@ export class ProfileComponent implements OnInit {
   user!:UserProfile
   repo!:Repositories
   searchName!: string
-  // form!: FormGroup
+  searchForm: any;
 
 
   searchResults(searchName: string){
@@ -26,18 +27,37 @@ export class ProfileComponent implements OnInit {
     }
   }
 
-  submitQuery(form: NgForm){
-    // this.form.reset()
+  clearForm(){
+    this.searchForm.reset();
+
+
   }
 
 
 
-  constructor(private http: HttpClient, private userService: UserServiceService, public repoService: UserServiceService) { }
+
+
+  constructor(private http: HttpClient, private userService: UserServiceService, public repoService: UserServiceService) {
+    this.searchName = 'MutuaFranklin';
+
+  }
+
+  updateProfile(searchName:string){
+  	this.searchName = searchName;
+  }
 
   ngOnInit(): void {
     this.user = this.userService.user;
     this.repo = this.userService.repo;
     // console.log(this.repo)
-   }
+    $('.userForm').on('click', function () {
+      $('.userForm').find('input').val('');
+     
+
+
+      // $('#addForm').find('input:number').val('');
+
+      });
+    }
 
 }

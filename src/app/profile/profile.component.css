@@ -22,7 +22,7 @@
 }
 
 .navbar-brand:hover{
-  color: #0c7eaf;
+  color: rgb(136, 132, 132);
 }
 
 .btn{
@@ -64,6 +64,11 @@ input::placeholder{
   border-radius: 50%;
   border: 1px solid white;
 }
+
+.image img:hover{
+  transform: scale(1.1);
+}
+
 
 .profile{
   display: flex;
@@ -145,7 +150,7 @@ input::placeholder{
   justify-content: space-between;
   align-items: baseline;
   font-weight: bold;
-  background-color: rgba(82, 69, 90, 0.5);
+  /* background-color: rgba(82, 69, 90, 0.5); */
 }
 .repo-title p{
   margin-left: 5px;
