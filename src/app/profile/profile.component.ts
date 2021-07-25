@@ -81,7 +81,7 @@ export class ProfileComponent implements OnInit {
       $('.userForm').find('input').val('');
 
       if (!$(".userForm input#searchName").val()){
-        $(".validate").fadeIn(1000);
+        // $(".validate").fadeIn(1000);
         $(".defaultUser").hide();
         $(".onSearch").fadeIn(500);
         $(".onSearch").css("display", "flex");
