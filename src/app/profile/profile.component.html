@@ -42,7 +42,7 @@
         <i class="fa fa-map-marker-alt m-1"></i>
         <p>{{user.location}}</p>
       </div>
-     <a href="{{user.html_url}}" target="_blank"><button type="button" class="btn btn-warning profilebtn">View profile on Github</button></a>
+     <a href="{{user.html_url}}" target="_blank" class="profilebtn"><button type="button" class="btn">View profile on Github</button></a>
 
     </div>
     <div class=" col-md-7 repo">
@@ -77,7 +77,7 @@
             <div class="repo-details" *ngFor='let repo of repoService.items ; let i = index'>
               <div class="repo-title" appBackgroundColor>
                 <p>{{repoService.items[i].name}}</p>
-                <a href="{{repoService.items[i].html_url}}" target="_blank"><button type="button" class="btn btn-warning repobtn">View project repo on Github</button></a>
+                <a href="{{repoService.items[i].html_url}}" target="_blank" class="repobtn"><button type="button" class="btn ">View project repo on Github</button></a>
               </div>
               <div class="repo-description">
                 <p> {{repoService.items[i].description}}</p>
@@ -150,7 +150,7 @@
         <i class="fa fa-map-marker-alt m-1"></i>
         <p>{{user.location}}</p>
       </div>
-     <a href="{{user.html_url}}" target="_blank"><button type="button" class="btn btn-warning profilebtn">View profile on Github</button></a>
+     <a href="{{user.html_url}}" target="_blank" class="profilebtn"><button type="button" class="btn btn-warning">View profile on Github</button></a>
 
     </div>
     <div class=" col-md-7 repo">
@@ -185,7 +185,7 @@
             <div class="repo-details" *ngFor='let repo of repoService.items ; let i = index'>
               <div class="repo-title" appBackgroundColor>
                 <p>{{repoService.items[i].name}}</p>
-                <a href="{{repoService.items[i].html_url}}" target="_blank"><button type="button" class="btn btn-warning repobtn">View project repo on Github</button></a>
+                <a href="{{repoService.items[i].html_url}}" target="_blank" class="repobtn"><button type="button" class="btn btn-warning ">View project repo on Github</button></a>
               </div>
               <div class="repo-description">
                 <p> {{repoService.items[i].description}}</p>
@@ -201,7 +201,7 @@
               <img src="{{userFollowers.followersList[i].avatar_url}}" class="card-img-top" alt="...">
               <div class="card-body">
                 <p>{{userFollowers.followersList[i].login}}</p>
-                <a href="{{userFollowers.followersList[i].html_url}}" target="_blank"><button type="button" class="btn btn-warning profilebtn">View profile on Github</button></a>
+                <a href="{{userFollowers.followersList[i].html_url}}" target="_blank" class="profilebtn" ><button type="button" class="btn btn-warning">View profile on Github</button></a>
 
               </div>
             </div>

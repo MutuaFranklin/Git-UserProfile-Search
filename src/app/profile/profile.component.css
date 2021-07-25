@@ -25,7 +25,7 @@
   color: rgb(136, 132, 132);
 }
 
-.btn{
+.userSearchBtn{
   background-color: #020c22;
   border: 1px solid white;
   color: white;
@@ -137,16 +137,20 @@ input::placeholder{
 }
 
 .profilebtn{
-  background-color: rgba(190, 125, 40, 0.7);
-  border: 1px solid gray;
+  background: rgb(12, 1, 20);
+  color: rgba(233, 134, 4, 0.9) !important;
+  border: 2px solid gray;
   font-size: 13px;
+  font-weight: bold;
+  border-radius: 5px;
 
 
 }
 
 .profilebtn:hover{
-  background: rgb(12, 1, 20);
-  color: rgba(233, 134, 4, 0.9) !important;
+  color: white;
+  background-color: rgba(190, 125, 40, 0.7);
+
 }
 
 
@@ -216,7 +220,7 @@ input::placeholder{
 }
 .repobtn{
   margin: 6px;
-  background-color: rgba(233, 134, 4, 0.5);
+  background-color: rgba(233, 134, 4, 0.5) !important;
   border: 1px solid gray;
   font-size: 14px;
   font-weight:lighter;
