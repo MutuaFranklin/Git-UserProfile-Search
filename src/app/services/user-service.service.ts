@@ -42,7 +42,7 @@ export class UserServiceService {
     }
     const promise = new Promise<void>((resolve, reject) => {
       this.http
-        .get<ApiResponse>(environment.apiUrl + "MutuaFranklin" + environment.apikey)
+        .get<ApiResponse>(environment.apiUrl + "MutuaFranklin")
         .toPromise()
         .then(profile => {
           this.user.name = profile.name;

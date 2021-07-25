@@ -158,26 +158,10 @@
         <div class="card-body">
           <!-- repo list -->
           <div class="repo-list">
-            <div class="header">
-              <form class="d-flex repoForm">
-                <input type="text" class="form-control" name="searchName"  required placeholder="Search a user repository" id="searchName" #searchName (keyup.enter)= "searchResults(searchName.value)" >
-                <!-- <button type="submit" class="btn btn-success" (click) = "searchResults(searchName.value)">Search</button> -->
-              </form>
-              <i class="fa fa-registered m-1 ms-2"></i>
-              <p class="r m-1">Repositories</p>
-              <span class="repo-total m-1">{{user.public_repos}}</span>
-
+            <div class="repo-list">
+              <app-repositories></app-repositories>
             </div>
 
-            <div class="repo-details" *ngFor='let repo of repoService.items ; let i = index'>
-              <div class="repo-title" appBackgroundColor>
-                <p>{{repoService.items[i].name}}</p>
-                <a href="{{repoService.items[i].html_url}}" target="_blank" class=""><button type="button" class="btn btn-warning repobtn ">View project repo on Github</button></a>
-              </div>
-              <div class="repo-description">
-                <p> {{repoService.items[i].description}}</p>
-              </div>
-            </div>
           </div>
 
           <!-- followers list -->
