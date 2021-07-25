@@ -217,6 +217,7 @@ input::placeholder{
 }
 .repo-title p{
   margin-left: 5px;
+  font-size: 14px;
 }
 .repobtn{
   margin: 6px;
