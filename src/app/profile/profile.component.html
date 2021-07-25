@@ -86,7 +86,7 @@
           </div>
 
           <!-- followers list -->
-          <div class="followers-list">
+          <div class="followers-list default-search">
 
             <p>Followers List</p>
             <div class="card follower-card" style="width: 18rem;"  *ngFor = 'let fol of userFollowers.followersList; let i =index'>
@@ -101,7 +101,7 @@
           </div>
 
           <!-- following list -->
-          <div class="following-list">
+          <div class="following-list default-search">
             <p>Following List</p>
             <div class="card follower-card" style="width: 18rem;"  *ngFor = 'let fol of userFollowing.followingList; let i =index'>
               <img src="{{userFollowing.followingList[i].avatar_url}}" class="card-img-top" alt="...">
@@ -194,14 +194,14 @@
           </div>
 
           <!-- followers list -->
-          <div class="followers-list">
+          <div class="followers-list after-search">
 
             <p>Followers List</p>
             <div class="card follower-card" style="width: 18rem;"  *ngFor = 'let fol of userFollowers.followersList; let i =index'>
               <img src="{{userFollowers.followersList[i].avatar_url}}" class="card-img-top" alt="...">
               <div class="card-body">
                 <p>{{userFollowers.followersList[i].login}}</p>
-                <a href="{{userFollowers.followersList[i].html_url}}" target="_blank" class="profilebtn" ><button type="button" class="btn btn-warning">View profile on Github</button></a>
+                <a href="{{userFollowers.followersList[i].html_url}}" target="_blank" class="" ><button type="button" class="btn btn-warning profilebtn">View profile on Github</button></a>
 
               </div>
             </div>
@@ -209,13 +209,13 @@
           </div>
 
           <!-- following list -->
-          <div class="following-list">
+          <div class="following-list after-search">
             <p>Following List</p>
             <div class="card follower-card" style="width: 18rem;"  *ngFor = 'let fol of userFollowing.followingList; let i =index'>
               <img src="{{userFollowing.followingList[i].avatar_url}}" class="card-img-top" alt="...">
               <div class="card-body">
                 <p>{{userFollowing.followingList[i].login}}</p>
-                <a href="{{userFollowing.followingList[i].html_url}}" target="_blank" class="profilebtn"><button type="button" class="btn btn-warning ">View profile on Github</button></a>
+                <a href="{{userFollowing.followingList[i].html_url}}" target="_blank" class=""><button type="button" class="btn btn-warning profilebtn">View profile on Github</button></a>
 
               </div>
             </div>

@@ -249,11 +249,10 @@ input::placeholder{
 /* followers */
 
 .followers-list{
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   background-color: rgba(25, 2, 51, 0.5);
-  display: none;
 
   /* background-color: rgba(82, 69, 90, 0.5); */
 
@@ -263,9 +262,8 @@ input::placeholder{
 }
 
 .following-list{
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   background-color: rgba(48, 39, 58, 0.5);
-  display: none;
 }
