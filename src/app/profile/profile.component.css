@@ -138,8 +138,8 @@ input::placeholder{
 
 .profilebtn{
   background: rgb(12, 1, 20);
-  color: rgba(233, 134, 4, 0.9) !important;
   border: 2px solid gray;
+  color: rgba(233, 134, 4, 0.9) !important;
   font-size: 13px;
   font-weight: bold;
   border-radius: 5px;
@@ -220,10 +220,16 @@ input::placeholder{
 }
 .repobtn{
   margin: 6px;
+  color: white;
   background-color: rgba(233, 134, 4, 0.5) !important;
   border: 1px solid gray;
   font-size: 14px;
   font-weight:lighter;
+}
+
+.repobtn:hover{
+  color: white;
+  background-color: rgba(25, 2, 51, 0.5);
 }
 
 .repo-description{
