@@ -160,6 +160,14 @@ input::placeholder{
   margin-left: 6px;
 }
 
+.repo-link{
+  padding-bottom: 5px;
+  border-radius:5px;
+}
+
+.repo-link:hover{
+  background: rgb(12, 1, 20);
+}
 
 .header{
   display: flex;
