@@ -62,7 +62,7 @@ input::placeholder{
   font-weight: bold;
   margin-left:5px ;
   height: auto;
-  display: none;
+  /* display: none; */
 }
 
 .row{
@@ -70,6 +70,13 @@ input::placeholder{
   margin-top: 30px;
 }
 
+.onSearch{
+  display: none;
+}
+
+.defaultUser{
+  display: flex;
+}
 
 .image img{
   height: 300px;

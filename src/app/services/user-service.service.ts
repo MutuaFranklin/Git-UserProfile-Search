@@ -23,10 +23,69 @@ export class UserServiceService {
   constructor(private http: HttpClient) {
     this.user = new UserProfile(" ", " ", " ", " ", " ", 0, " ", "","", new Date());
     this.repo = new Repositories(" ", " ", " ", " ", "");
-    this.searchName = 'MutuaFranklin';
    }
 
+  getDefaultUser(){
+    interface ApiResponse {
+      name: string;
+      login: string;
+      avatar_url: string;
+      bio: string;
+      location: string;
+      public_repos: number;
+      html_url: string;
+      following: string;
+      followers:string;
+      created_at: Date;
 
+
+    }
+    const promise = new Promise<void>((resolve, reject) => {
+      this.http
+        .get<ApiResponse>(environment.apiUrl + "MutuaFranklin" + environment.apikey)
+        .toPromise()
+        .then(profile => {
+          this.user.name = profile.name;
+          this.user.login = profile.login;
+          this.user.avatar_url = profile.avatar_url;
+          this.user.bio = profile.bio;
+          this.user.location = profile.location;
+          this.user.public_repos = profile.public_repos;
+          this.user.html_url = profile.html_url;
+          this.user.following = profile.following;
+          this.user.followers = profile.followers;
+          this.user.created_at = profile.created_at;
+
+
+
+          // console.log(profile);
+
+          resolve();
+        });
+    });
+
+  }
+
+
+  getDefaultRepo() {
+    interface ApiResponse {
+      name: string;
+      homepage: string;
+      description: string;
+      html_url: string;
+
+    }
+    this.http
+      .get<ApiResponse>(environment.apiUrl + "MutuaFranklin" + environment.apiRepokey)
+      .subscribe(response => {
+        this.items = response;
+        // console.log(response)
+
+      });
+  }
+
+  
+  // on search event
   getUserData(searchName: string) {
     interface ApiResponse {
       name: string;

@@ -12,6 +12,7 @@ import * as $ from 'jquery';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+
   user!:UserProfile
   repo!:Repositories
   searchName!: string
@@ -22,6 +23,7 @@ export class ProfileComponent implements OnInit {
     if (searchName !== ''){
       this.userService.getUserData(searchName);
       this.repoService.getRepoInfo(searchName);
+      this.userService.updateProfile(searchName)
       // console.log(searchName)
 
     }
@@ -37,14 +39,20 @@ export class ProfileComponent implements OnInit {
 
 
 
-  constructor(private http: HttpClient, private userService: UserServiceService, public repoService: UserServiceService) {
-    this.searchName = 'MutuaFranklin';
+  constructor(
+    private http: HttpClient,
+    private userService: UserServiceService,
+    public repoService: UserServiceService,
+    public defaultUser: UserServiceService,
+    public defaultRepo: UserServiceService,
+    ) {
+    this.defaultUser.getDefaultUser();
+    this.defaultRepo.getDefaultRepo();
+
 
   }
 
-  updateProfile(searchName:string){
-  	this.searchName = searchName;
-  }
+
 
   ngOnInit(): void {
     this.user = this.userService.user;
@@ -54,13 +62,18 @@ export class ProfileComponent implements OnInit {
       $('.userForm').find('input').val('');
 
       if (!$(".userForm input#searchName").val()){
-        alert("Search username required!")
-        $(".validate").fadeIn(1000);
+        $(".validate").fadeOut(1000);
+        $(".defaultUser").hide();
+        $(".onSearch").fadeIn(500);
+        $(".onSearch").css("display", "flex");
+
+
+
 
       }
       else{
         // alert("Search username required!")
-        $(".validate").fadeOut();
+        // $(".validate").fadeOut();
 
       }
 
