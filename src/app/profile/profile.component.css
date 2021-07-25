@@ -228,8 +228,13 @@ input::placeholder{
 }
 
 .repobtn:hover{
-  color: white;
-  background-color: rgba(25, 2, 51, 0.5);
+  background-color: rgba(25, 2, 51, 0.5) !important;
+  border: 2px solid gray;
+  font-weight: bold;
+  color: rgba(233, 134, 4, 0.9) !important;
+  font-size: 13px;
+
+
 }
 
 .repo-description{
