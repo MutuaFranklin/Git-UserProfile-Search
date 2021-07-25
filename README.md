@@ -38,17 +38,17 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 ## Technical Requirements
--Your project must contain a well-designed landing page that displays your GitHub information such as your username, your profile photos and a list of your repositories.
--You must place your access key inside the environment.ts file and place it inside the gitignore file.
--You must create a HTTP service that uses a promise to make the requests to the GitHub API.
--The HTTP request should be able to search for both GitHub users and GitHub repositories.
--Your project must have two classes for the user and repository.
--Your project must have a proper routing structure that links a GitHub username to the users GitHub repositories.
--Your project must have a separate routing module.
--Your project must contain a custom directive and a custom pipe.
--Your Project must be well designed and visually appealing and of portfolio quality.
--Your project must have a well-documented README file.
--Your project must be deployed and the deployed link should be submitted.
+- Your project must contain a well-designed landing page that displays your GitHub info such as your username, profile photos and a list of your repo.
+- You must place your access key inside the environment.ts file and place it inside the gitignore file.
+- You must create a HTTP service that uses a promise to make the requests to the GitHub API.
+- The HTTP request should be able to search for both GitHub users and GitHub repositories.
+- Your project must have two classes for the user and repository.
+- Your project must have a proper routing structure that links a GitHub username to the users GitHub repositories.
+- Your project must have a separate routing module.
+- Your project must contain a custom directive and a custom pipe.
+- Your Project must be well designed and visually appealing and of portfolio quality.
+- Your project must have a well-documented README file.
+- Your project must be deployed and the deployed link should be submitted.
  
 
 ## Technologies Used
