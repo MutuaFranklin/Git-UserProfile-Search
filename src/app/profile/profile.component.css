@@ -145,11 +145,14 @@ input::placeholder{
   border-radius: 5px;
 
 
+
 }
 
 .profilebtn:hover{
-  color: white;
+  color: white !important;
   background-color: rgba(190, 125, 40, 0.7);
+  border: 1px solid gray;
+
 
 }
 
