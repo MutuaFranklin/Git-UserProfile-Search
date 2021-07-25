@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
-import { SearchRepoComponent } from './search-repo/search-repo.component';
+import { RepoSearchComponent } from './repo-search/repo-search.component';
 
 const routes: Routes = [
   { path: '', component: ProfileComponent},
-  { path: 'repositories', component: SearchRepoComponent},
+  { path: 'repositories', component: RepoSearchComponent},
 ];
 
 @NgModule({

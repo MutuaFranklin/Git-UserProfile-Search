@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SearchRepoComponent } from './search-repo.component';
+import { RepoSearchComponent } from './repo-search.component';
 
-describe('SearchRepoComponent', () => {
-  let component: SearchRepoComponent;
-  let fixture: ComponentFixture<SearchRepoComponent>;
+describe('RepoSearchComponent', () => {
+  let component: RepoSearchComponent;
+  let fixture: ComponentFixture<RepoSearchComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SearchRepoComponent ]
+      declarations: [ RepoSearchComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SearchRepoComponent);
+    fixture = TestBed.createComponent(RepoSearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

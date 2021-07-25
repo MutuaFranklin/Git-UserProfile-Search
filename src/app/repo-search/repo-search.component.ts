@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-search-repo',
-  templateUrl: './search-repo.component.html',
-  styleUrls: ['./search-repo.component.css']
+  selector: 'app-repo-search',
+  templateUrl: './repo-search.component.html',
+  styleUrls: ['./repo-search.component.css']
 })
-export class SearchRepoComponent implements OnInit {
+export class RepoSearchComponent implements OnInit {
 
   repoResults(searchName: string){
     if (searchName !== ''){

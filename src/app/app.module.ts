@@ -13,6 +13,7 @@ import { DateCounterPipe } from './date-counter.pipe';
 import { CursorPointerDirective } from './directives/cursor-pointer.directive';
 import { BackgroundColorDirective } from './directives/background-color.directive';
 import { RepositoriesComponent } from './repositories/repositories.component';
+import { RepoSearchComponent } from './repo-search/repo-search.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { RepositoriesComponent } from './repositories/repositories.component';
     CursorPointerDirective,
     BackgroundColorDirective,
     RepositoriesComponent,
+    RepoSearchComponent,
   ],
   imports: [
     BrowserModule,
