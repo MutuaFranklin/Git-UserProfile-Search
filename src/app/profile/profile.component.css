@@ -8,22 +8,44 @@
 
 
 .navbar{
-  background: transparent !important;
+  background-color: rgba(15, 1, 24, 0.5) !important;
   /* background-color: rgb(137, 100, 224) !important; */
   color: aliceblue;
   border-bottom: 1px solid rgb(90, 88, 88);
 }
 
 .navbar-brand{
-  color: rgba(190, 125, 40);
+  color: rgba(233, 134, 4, 0.9) !important;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 15px;
 
 }
 
 .navbar-brand:hover{
   color: rgb(136, 132, 132);
 }
+
+.nav-links{
+  display: flex;
+  background-color: rgba(42, 32, 71, 0.5);
+  width: 30%;
+  justify-content: space-between;
+  margin-right: 30px;
+
+}
+.nav-links a{
+  color: rgba(233, 134, 4, 0.9) !important;
+  font-weight: bold;
+  font-size: 13px;
+
+}
+
+
+.nav-links a:hover{
+color:white
+}
+
+
 
 .userSearchBtn{
   background-color: #020c22;
@@ -37,7 +59,8 @@
 }
 
 .userSearchBtn:hover{
-  background-color: rgba(190, 125, 40, 0.7);
+  background-color:rgba(117, 68, 4, 0.9) !important;
+  ;
 
 }
 
@@ -68,7 +91,7 @@ input::placeholder{
   font-weight: bold;
   margin-left:5px ;
   height: auto;
-  /* display: none; */
+  display: none;
 }
 
 .row{
@@ -222,24 +245,7 @@ input::placeholder{
   margin-left: 5px;
   font-size: 14px;
 }
-.repobtn{
-  margin: 6px;
-  color: white;
-  background-color: rgba(233, 134, 4, 0.5) !important;
-  border: 1px solid gray;
-  font-size: 14px;
-  font-weight:lighter;
-}
 
-.repobtn:hover{
-  background-color: rgba(25, 2, 51, 0.5) !important;
-  border: 2px solid gray;
-  font-weight: bold;
-  color: rgba(233, 134, 4, 0.9) !important;
-  font-size: 13px;
-
-
-}
 
 .repo-description{
   margin: 5px;

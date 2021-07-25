@@ -1,0 +1,99 @@
+.repoPage{
+
+  height: auto;
+  /* background-color: rgb(20, 2, 2); */
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnXVzukgaGqVrr3KbG8RiCwhGOPUetvlqc9w&usqp=CAU);
+  background-size: contain;
+  color: white;
+
+}
+
+
+
+.navbar{
+  background-color: rgba(15, 1, 24, 0.5) !important;
+  /* background-color: rgb(137, 100, 224) !important; */
+  color: aliceblue;
+  border-bottom: 1px solid rgb(90, 88, 88);
+}
+
+.navbar-brand{
+  color: rgba(233, 134, 4, 0.9) !important;
+  font-weight: bold;
+  font-size: 15px;
+
+}
+
+.navbar-brand:hover{
+  color: rgb(136, 132, 132);
+}
+
+.nav-links{
+  display: flex;
+  background-color: rgba(42, 32, 71, 0.5);
+  width: 30%;
+  justify-content: space-between;
+  margin-right: 30px;
+
+}
+.nav-links a{
+  color: rgba(233, 134, 4, 0.9) !important;
+  font-weight: bold;
+  font-size: 13px;
+
+}
+
+
+.nav-links a:hover{
+color:white
+}
+
+
+
+.userSearchBtn{
+  background-color: #020c22;
+  border: 1px solid white;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  height: 38px;
+  margin: 2px;
+
+}
+
+.userSearchBtn:hover{
+  background-color:rgba(117, 68, 4, 0.9) !important;
+  ;
+
+}
+
+.userForm{
+  width: 28%;
+  font-size: 12px;
+  height: 41px;
+  margin: 3px;
+
+
+}
+
+.userForm input{
+  border: 2px solid #021a24;
+  width: 50%;
+
+}
+
+input::placeholder{
+  font-weight: 600;
+  font-size: 13px;
+
+}
+.validate{
+  display: flex;
+  padding-top: 12px;
+  color: red;
+  font-weight: bold;
+  margin-left:5px ;
+  height: auto;
+  display: none;
+}
+
