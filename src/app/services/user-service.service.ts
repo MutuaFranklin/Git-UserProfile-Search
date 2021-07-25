@@ -14,7 +14,7 @@ export class UserServiceService {
 
   user: UserProfile;
 
-  items!:any;
+  items:any;
 
   public searchName !:string;
 
@@ -84,7 +84,7 @@ export class UserServiceService {
       });
   }
 
-  
+
   // on search event
   getUserData(searchName: string) {
     interface ApiResponse {

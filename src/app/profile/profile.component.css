@@ -141,6 +141,26 @@ input::placeholder{
 .repoForm{
   width: 70%;
 }
+.card{
+  background: transparent;
+  border: 1px solid rgb(90, 88, 88);
+
+}
+
+.card-header{
+    background-color: rgba(82, 69, 90, 0.5);
+
+}
+
+.nav-tabs li a{
+  color: rgba(233, 134, 4, 0.9) !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold !important;
+  font-size: 13px;
+  margin-left: 6px;
+}
+
+
 .header{
   display: flex;
   align-items: center;
@@ -185,4 +205,26 @@ input::placeholder{
 .repo-description{
   margin: 5px;
 
+}
+
+/* followers */
+
+.followers-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(25, 2, 51, 0.5);
+
+  /* background-color: rgba(82, 69, 90, 0.5); */
+
+}
+.follower-card{
+  margin: 20px;
+}
+
+.following-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(48, 39, 58, 0.5);
 }

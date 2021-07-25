@@ -5,7 +5,7 @@
       <form class="d-flex m-2 userForm" >
         <input type="text" class="form-control" name="searchName" required placeholder="Search a git user" id="searchName" #searchName (keyup.enter)= "searchResults(searchName.value)" >
 
-        <button type="submit" class="btn userSearchBtn" (click) = "searchResults(searchName.value);"  (click)="clearForm()">Search</button>
+        <button type="submit" class="btn userSearchBtn" (click) = "searchResults(searchName.value);"  >Search</button>
         <div class="validate">
           <p>Enter the search username !!</p>
         </div>
@@ -14,6 +14,7 @@
     </div>
   </nav>
 
+<!-- default user -->
   <div class="row defaultUser">
     <div class="col-md-5 profile">
       <div class="image">
@@ -45,30 +46,82 @@
 
     </div>
     <div class=" col-md-7 repo">
-      <div class="header">
-        <form class="d-flex repoForm">
-          <input type="text" class="form-control" name="searchName"  required placeholder="Search a user repository" id="searchName" #searchName (keyup.enter)= "searchResults(searchName.value)" >
-          <!-- <button type="submit" class="btn btn-success" (click) = "searchResults(searchName.value)">Search</button> -->
-        </form>
-        <i class="fa fa-registered m-1 ms-2"></i>
-        <p class="r m-1">Repositories</p>
-        <span class="repo-total m-1">{{user.public_repos}}</span>
+      <div class="card text-center">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link active repo-link" aria-current="true" href="#">Repositories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link followers-link" href="#">Followers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link following-link" href="#">Following</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <!-- repo list -->
+          <div class="repo-list">
+            <div class="header">
+              <form class="d-flex repoForm">
+                <input type="text" class="form-control" name="searchName"  required placeholder="Search a user repository" id="searchName" #searchName (keyup.enter)= "searchResults(searchName.value)" >
+                <!-- <button type="submit" class="btn btn-success" (click) = "searchResults(searchName.value)">Search</button> -->
+              </form>
+              <i class="fa fa-registered m-1 ms-2"></i>
+              <p class="r m-1">Repositories</p>
+              <span class="repo-total m-1">{{user.public_repos}}</span>
+
+            </div>
+
+            <div class="repo-details" *ngFor='let repo of repoService.items ; let i = index'>
+              <div class="repo-title" appBackgroundColor>
+                <p>{{repoService.items[i].name}}</p>
+                <a href="{{repoService.items[i].html_url}}" target="_blank"><button type="button" class="btn btn-warning repobtn">View project repo on Github</button></a>
+              </div>
+              <div class="repo-description">
+                <p> {{repoService.items[i].description}}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- followers list -->
+          <div class="followers-list">
+
+            <p>Followers List</p>
+            <div class="card follower-card" style="width: 18rem;"  *ngFor = 'let fol of userFollowers.followersList; let i =index'>
+              <img src="{{userFollowers.followersList[i].avatar_url}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p>{{userFollowers.followersList[i].login}}</p>
+                <a href="{{userFollowers.followersList[i].html_url}}" target="_blank"><button type="button" class="btn btn-warning profilebtn">View profile on Github</button></a>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- following list -->
+          <div class="following-list">
+            <p>Following List</p>
+            <div class="card follower-card" style="width: 18rem;"  *ngFor = 'let fol of userFollowing.followingList; let i =index'>
+              <img src="{{userFollowing.followingList[i].avatar_url}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p>{{userFollowing.followingList[i].login}}</p>
+                <a href="{{userFollowing.followingList[i].html_url}}" target="_blank"><button type="button" class="btn btn-warning profilebtn">View profile on Github</button></a>
+
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
 
-      <div class="repo-details" *ngFor='let repo of repoService.items ; let i = index'>
-        <div class="repo-title" appBackgroundColor>
-          <p>{{repoService.items[i].name}}</p>
-          <a href="{{repoService.items[i].html_url}}" target="_blank"><button type="button" class="btn btn-warning repobtn">View project repo on Github</button></a>
-        </div>
-        <div class="repo-description">
-          <p> {{repoService.items[i].description}}</p>
-        </div>
-      </div>
 
     </div>
 
   </div>
+
+  <!-- on search -->
 
   <div class="row onSearch">
     <div class="col-md-5 profile">
@@ -101,26 +154,76 @@
 
     </div>
     <div class=" col-md-7 repo">
-      <div class="header">
-        <form class="d-flex repoForm">
-          <input type="text" class="form-control" name="searchName"  required placeholder="Search a user repository" id="searchName" #searchName (keyup.enter)= "searchResults(searchName.value)" >
-          <!-- <button type="submit" class="btn btn-success" (click) = "searchResults(searchName.value)">Search</button> -->
-        </form>
-        <i class="fa fa-registered m-1 ms-2"></i>
-        <p class="r m-1">Repositories</p>
-        <span class="repo-total m-1">{{user.public_repos}}</span>
+      <div class="card text-center">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link active repo-link" aria-current="true" href="#">Repositories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link followers-link" href="#">Followers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link following-link" href="#">Following</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <!-- repo list -->
+          <div class="repo-list">
+            <div class="header">
+              <form class="d-flex repoForm">
+                <input type="text" class="form-control" name="searchName"  required placeholder="Search a user repository" id="searchName" #searchName (keyup.enter)= "searchResults(searchName.value)" >
+                <!-- <button type="submit" class="btn btn-success" (click) = "searchResults(searchName.value)">Search</button> -->
+              </form>
+              <i class="fa fa-registered m-1 ms-2"></i>
+              <p class="r m-1">Repositories</p>
+              <span class="repo-total m-1">{{user.public_repos}}</span>
+
+            </div>
+
+            <div class="repo-details" *ngFor='let repo of repoService.items ; let i = index'>
+              <div class="repo-title" appBackgroundColor>
+                <p>{{repoService.items[i].name}}</p>
+                <a href="{{repoService.items[i].html_url}}" target="_blank"><button type="button" class="btn btn-warning repobtn">View project repo on Github</button></a>
+              </div>
+              <div class="repo-description">
+                <p> {{repoService.items[i].description}}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- followers list -->
+          <div class="followers-list">
+
+            <p>Followers List</p>
+            <div class="card follower-card" style="width: 18rem;"  *ngFor = 'let fol of userFollowers.followersList; let i =index'>
+              <img src="{{userFollowers.followersList[i].avatar_url}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p>{{userFollowers.followersList[i].login}}</p>
+                <a href="{{userFollowers.followersList[i].html_url}}" target="_blank"><button type="button" class="btn btn-warning profilebtn">View profile on Github</button></a>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- following list -->
+          <div class="following-list">
+            <p>Following List</p>
+            <div class="card follower-card" style="width: 18rem;"  *ngFor = 'let fol of userFollowing.followingList; let i =index'>
+              <img src="{{userFollowing.followingList[i].avatar_url}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p>{{userFollowing.followingList[i].login}}</p>
+                <a href="{{userFollowing.followingList[i].html_url}}" target="_blank"><button type="button" class="btn btn-warning profilebtn">View profile on Github</button></a>
+
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
 
-      <div class="repo-details" *ngFor='let repo of repoService.items ; let i = index'>
-        <div class="repo-title" appBackgroundColor>
-          <p>{{repoService.items[i].name}}</p>
-          <a href="{{repoService.items[i].html_url}}" target="_blank"><button type="button" class="btn btn-warning repobtn">View project repo on Github</button></a>
-        </div>
-        <div class="repo-description">
-          <p> {{repoService.items[i].description}}</p>
-        </div>
-      </div>
 
     </div>
 
