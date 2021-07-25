@@ -144,6 +144,12 @@ input::placeholder{
 
 }
 
+.profilebtn:hover{
+  background: rgb(12, 1, 20);
+  color: rgba(233, 134, 4, 0.9) !important;
+}
+
+
 .repoForm{
   width: 70%;
 }
