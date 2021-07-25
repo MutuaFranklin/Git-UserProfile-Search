@@ -31,7 +31,9 @@
   color: white;
   font-size: 14px;
   font-weight: 600;
-  margin: 1px;
+  height: 38px;
+  margin: 2px;
+
 }
 
 .userSearchBtn:hover{
@@ -42,6 +44,10 @@
 .userForm{
   width: 28%;
   font-size: 12px;
+  height: 41px;
+  margin: 3px;
+
+
 }
 
 .userForm input{
