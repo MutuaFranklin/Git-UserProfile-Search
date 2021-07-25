@@ -12,6 +12,7 @@ import { NgProgressModule } from '@ngx-progressbar/core';
 import { DateCounterPipe } from './date-counter.pipe';
 import { CursorPointerDirective } from './directives/cursor-pointer.directive';
 import { BackgroundColorDirective } from './directives/background-color.directive';
+import { RepositoriesComponent } from './repositories/repositories.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { BackgroundColorDirective } from './directives/background-color.directiv
     DateCounterPipe,
     CursorPointerDirective,
     BackgroundColorDirective,
+    RepositoriesComponent,
   ],
   imports: [
     BrowserModule,
