@@ -100,7 +100,6 @@ export class ProfileComponent implements OnInit {
       $(".repo-list").fadeIn(1000);
       $(".followers-list").hide();
       $(".following-list").hide();
-      // $(".after-search").css("display", "flex");
 
 
     });
@@ -109,7 +108,7 @@ export class ProfileComponent implements OnInit {
       $(".followers-list").fadeIn(2000);
       $(".repo-list").hide();
       $(".following-list").hide();
-      // $(".after-search").css("display", "flex");
+      $(".followers-list").css("display", "flex");
 
 
     });
@@ -118,7 +117,7 @@ export class ProfileComponent implements OnInit {
       $(".following-list").fadeIn(1000);
       $(".followers-list").hide();
       $(".repo-list").hide();
-      // $(".after-search").css("display", "flex");
+      $(".following-list").css("display", "flex");
 
 
     });
