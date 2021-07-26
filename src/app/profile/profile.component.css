@@ -1,5 +1,6 @@
 .main-page{
   height: auto;
+  width: 100%;
   /* background-color: rgb(20, 2, 2); */
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnXVzukgaGqVrr3KbG8RiCwhGOPUetvlqc9w&usqp=CAU);
   background-size: contain;
@@ -205,6 +206,8 @@ input::placeholder{
 .repo-link{
   padding-bottom: 5px;
   border-radius:5px;
+  color: indigo !important;
+
 }
 
 .repo-link:hover{
