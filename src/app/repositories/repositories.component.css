@@ -87,3 +87,22 @@
   margin: 5px;
 
 }
+
+
+
+@media only screen and (max-width: 600px) {
+
+
+
+.repo-details{
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid rgb(90, 88, 88);
+  line-height: 2;
+  margin-bottom: 20px;
+
+}
+
+
+
+}
