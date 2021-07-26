@@ -11,10 +11,7 @@ export class UserFollowService {
 
   follower!: Followers
   followersList:any
-
-
   public searchName !:string;
-
 
 
   constructor(private http: HttpClient) {

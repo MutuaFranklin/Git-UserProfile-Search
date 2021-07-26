@@ -37,12 +37,6 @@ export class ProfileComponent implements OnInit {
 
     }
   }
-
-
-
-
-
-
   constructor(
     private http: HttpClient,
     private userService: UserServiceService,
@@ -50,13 +44,7 @@ export class ProfileComponent implements OnInit {
     public userFollowers: UserFollowService,
     public userFollowing: FollowingService,
 
-
-
-
     ) {
-
-
-
 
   }
 
@@ -73,8 +61,7 @@ export class ProfileComponent implements OnInit {
 
       if (!$(".userForm input#searchName").val()){
         // $(".validate").fadeIn(1000);
-        // $(".defaultUser").hide();
-        // $(".onSearch").fadeIn(500);
+
         $(".onSearch").css("display", "flex");
         $(".after-search").css("display", "flex");
 
@@ -112,12 +99,6 @@ export class ProfileComponent implements OnInit {
 
 
     });
-
-
-
-
-
-
 
   }
 

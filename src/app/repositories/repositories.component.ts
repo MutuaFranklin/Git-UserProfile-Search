@@ -20,14 +20,10 @@ export class RepositoriesComponent implements OnInit {
       this.userService.getUserData(searchName);
       this.repoService.getRepoInfo(searchName);
 
-
-
     //  console.log(searchName)
 
     }
   }
-
-
 
   constructor(
     private http: HttpClient,
