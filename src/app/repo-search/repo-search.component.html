@@ -1,23 +1,24 @@
 <div class="container-fluid repoPage">
   <ng-progress></ng-progress>
-<nav class="navbar navbar-light bg-light mb-3 ">
-  <div class="container-fluid">
-    <form class="d-flex m-2 userForm" >
-      <input type="text" class="form-control" name="repoName" required placeholder="Search a git repo" id="repoName" #repoName (keyup.enter)= "repoResults(repoName.value)" >
-
-      <button type="submit" class="btn userSearchBtn" >Search</button>
-      <div class="validate">
-        <p>Enter the search username !!</p>
-      </div>
-    </form>
-    <div class="nav-links">
-      <a class="nav-link active" aria-current="page" routerLink="" routerLinkActive='active' >Profile</a>
-      <a class="nav-link active" aria-current="page" routerLink="/repositories" routerLinkActive='active'>Repositories</a>
-    </div>
+  <nav class="navbar navbar-light bg-light mb-3 ">
+    <div class="container-fluid">
       <a class="navbar-brand">GitScraperApp</a>
-  </div>
 
-</nav>
+      <form class="d-flex m-2 userForm" >
+        <input type="text" class="form-control" name="repoName" required placeholder="Search a git repo" id="repoName" #repoName (keyup.enter)= "repoResults(repoName.value)" >
+
+        <button type="submit" class="btn userSearchBtn" >Search</button>
+        <div class="validate">
+          <p>Enter the search username !!</p>
+        </div>
+      </form>
+      <div class="nav-links">
+        <a class="nav-link active" aria-current="page" routerLink="" routerLinkActive='active' >Profile</a>
+        <a class="nav-link active" aria-current="page" routerLink="/repositories" routerLinkActive='active'>Repositories</a>
+      </div>
+    </div>
+
+  </nav>
 
 <div class="container-fluid repoResults">
 

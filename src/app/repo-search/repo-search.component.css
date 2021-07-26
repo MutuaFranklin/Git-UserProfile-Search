@@ -97,3 +97,48 @@ input::placeholder{
   display: none;
 }
 
+
+
+
+@media only screen and (max-width: 600px) {
+
+
+  .userForm{
+    width:62%;
+    font-size: 12px;
+    height: 37px;
+    margin: 3px;
+
+
+  }
+
+  .userForm input{
+    border: 2px solid #021a24;
+    width: 100%;
+
+  }
+
+  .userSearchBtn{
+    background-color: #020c22;
+    border: 1px solid white;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    height: 34px;
+    margin: 2px;
+    margin-left: 7px;
+
+  }
+
+  .nav-links{
+    display: flex;
+    background-color: rgba(42, 32, 71, 0.5);
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 30px;
+
+  }
+
+
+
+}
