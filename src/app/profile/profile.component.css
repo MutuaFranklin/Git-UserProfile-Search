@@ -101,7 +101,7 @@ input::placeholder{
 }
 
 .onSearch{
-  display: none;
+  display: flex;
 }
 
 .defaultUser{

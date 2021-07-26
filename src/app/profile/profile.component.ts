@@ -47,21 +47,13 @@ export class ProfileComponent implements OnInit {
     private http: HttpClient,
     private userService: UserServiceService,
     public repoService: UserServiceService,
-    public defaultUser: UserServiceService,
-    public defaultRepo: UserServiceService,
-    public defaultUserFollowers: UserFollowService,
     public userFollowers: UserFollowService,
     public userFollowing: FollowingService,
-    public defaultUserFollowing: FollowingService,
 
 
 
 
     ) {
-    this.defaultUser.getDefaultUser();
-    this.defaultRepo.getDefaultRepo();
-    this.defaultUserFollowers.getDefaultUserFollowers();
-    this.defaultUserFollowing.getDefaultFollowing();
 
 
 
@@ -72,9 +64,8 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.user = this.userService.user;
-    // this.repo = this.userService.repo;
-    this.follower = this.defaultUserFollowers.follower;
-    this.follow = this.defaultUserFollowing.follow;
+    this.searchResults('MutuaFranklin');
+
 
     // console.log(this.follower)
     $('.userForm .userSearchBtn').on('click', function () {
@@ -82,8 +73,8 @@ export class ProfileComponent implements OnInit {
 
       if (!$(".userForm input#searchName").val()){
         // $(".validate").fadeIn(1000);
-        $(".defaultUser").hide();
-        $(".onSearch").fadeIn(500);
+        // $(".defaultUser").hide();
+        // $(".onSearch").fadeIn(500);
         $(".onSearch").css("display", "flex");
         $(".after-search").css("display", "flex");
 

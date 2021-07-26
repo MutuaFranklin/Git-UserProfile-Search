@@ -33,12 +33,9 @@ export class RepositoriesComponent implements OnInit {
     private http: HttpClient,
     private userService: UserServiceService,
     public repoService: UserServiceService,
-    public defaultUser: UserServiceService,
-    public defaultRepo: UserServiceService,
 
   ) {
-    this.defaultUser.getDefaultUser();
-    this.defaultRepo.getDefaultRepo();
+
    }
 
   ngOnInit(): void {
