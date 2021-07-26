@@ -2,6 +2,8 @@
   <ng-progress></ng-progress>
   <nav class="navbar navbar-light bg-light mb-3 ">
     <div class="container-fluid">
+      <a class="navbar-brand">GitScraperApp</a>
+
       <form class="d-flex m-2 userForm" >
         <input type="text" class="form-control" name="searchName" required placeholder="Search a git user" id="searchName" #searchName (keyup.enter)= "searchResults(searchName.value)" >
 
@@ -14,7 +16,6 @@
         <a class="nav-link active" aria-current="page" routerLink="" routerLinkActive='active' >Profile</a>
         <a class="nav-link active" aria-current="page" routerLink="/repositories" routerLinkActive='active'>Repositories</a>
       </div>
-        <a class="navbar-brand">GitScraperApp</a>
 
     </div>
   </nav>
