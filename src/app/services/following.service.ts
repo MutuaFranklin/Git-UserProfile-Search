@@ -34,7 +34,7 @@ export class FollowingService {
           .get<ApiResponse>(environment.apiUrl + "MutuaFranklin" + "/following")
           .subscribe(response => {
             this.followingList = response;
-              console.log(response)
+              // console.log(response)
 
           });
       });
