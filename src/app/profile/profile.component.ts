@@ -37,7 +37,7 @@ export class ProfileComponent implements OnInit {
 
     }
   }
-  
+
   constructor(
     private http: HttpClient,
     private userService: UserServiceService,
@@ -64,7 +64,6 @@ export class ProfileComponent implements OnInit {
         // $(".validate").fadeIn(1000);
 
         $(".onSearch").css("display", "flex");
-        $(".after-search").css("display", "flex");
 
 
       }

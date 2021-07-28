@@ -94,7 +94,7 @@ export class UserServiceService {
       // language: [];
       // created_at: Date;
       total:number,
-      items:[]
+      repos:[]
 
     }
     this.http
