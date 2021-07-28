@@ -107,22 +107,17 @@ export class UserServiceService {
   }
 
   searchRepoName(repoName:string) {
-    // interface ApiResponse {
-    //   name: string;
-    //   homepage: string;
-    //   description: string;
-    //   language: string;
-    //   html_url: string;
 
-    // }
-    this.http
-      .get<any>(environment.repoSearchUrl + repoName)
-      .subscribe(response => {
-        this.repoItems = response;
-        console.log(response)
+    return this.http.get(` https://api.github.com/search/repositories?q=${repoName}`);
+
+    // this.http
+    //   .get<any>(environment.repoSearchUrl + repoName)
+    //   .subscribe(response => {
+    //     this.repoItems = response.items;
+    //     console.log(response)
 
 
-      });
+    //   });
   }
 
 //   searchForRepository(repoName: string){

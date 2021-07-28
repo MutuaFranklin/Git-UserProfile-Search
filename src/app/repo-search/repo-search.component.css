@@ -122,7 +122,7 @@ input::placeholder{
 
 }
 
-.repo-details{
+.repo-search-details{
   width: 100%;
   margin-top: 20px;
   border: 1px solid rgb(90, 88, 88);
@@ -130,7 +130,7 @@ input::placeholder{
   margin-bottom: 20px;
 
 }
-.repo-title{
+.repo-search-title{
   display: flex;
   justify-content: space-between;
   align-items: baseline;

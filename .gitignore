@@ -45,4 +45,4 @@ testem.log
 Thumbs.db
 
 # API url for practice but doesnt work on production since the url will be hidden hence error
-.environment.ts
+environment.ts

@@ -17,28 +17,28 @@ export class RepoSearchComponent implements OnInit {
     if (repoName !== ''){
       this.searchRepo.searchRepoName(repoName);
 
-    // console.log(repoName)
 
     }
   }
 
-  // findRepo(input:string){
-  //   this.searchRepo.searchForRepository(input).toPromise().then(
-  //     (response:any) => {
-  //       this.repoList = response.items;
-  //       console.log(response)
-
-  //     }, (error: any) =>{
-  //       this.searchRepo.getUserData('');
-  //     }
-  //   )
-  // }
 
 
-  constructor( private http: HttpClient, public searchRepo: UserServiceService) { }
+  findRepo(input:string){
+    this.searchRepo.searchRepoName(input).toPromise().then(
+      (response:any) => {
+        this.repoList = response.items;
+        console.log(response)
+
+      }, (error: any) =>{
+        this.searchRepo.getUserData('');
+      }
+    )
+  }
+
+
+  constructor( private http: HttpClient, private searchRepo: UserServiceService) { }
 
   ngOnInit(): void {
-  //   this.repoItems = this.searchRepo.repoItems;
 
   }
 

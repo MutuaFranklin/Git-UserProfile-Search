@@ -107,7 +107,8 @@
   height: 23px;
   width: 23px;
   border-radius: 50%;
-  background-color: rgb(218, 213, 213);
+  background-color: rgb(179, 150, 201);
+  /* background-color: rgb(214, 213, 218); */
 }
 
 @media only screen and (max-width: 600px) {
