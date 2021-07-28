@@ -2,9 +2,10 @@
   <ng-progress></ng-progress>
   <nav class="navbar navbar-light bg-light mb-3 ">
     <div class="container-fluid">
-      <a class="navbar-brand">GitScraperApp</a>
+      <!-- <a class="navbar-brand">GitScraperApp</a> -->
 
       <form class="d-flex m-2 userForm" >
+        <i class="fab fa-github-square"></i>
         <input type="text" class="form-control" name="searchName" required placeholder="Search a git user" id="searchName" #searchName (keyup.enter)= "searchResults(searchName.value)" >
 
         <button type="submit" class="btn userSearchBtn" (click) = "searchResults(searchName.value);"  >Search</button>
@@ -44,7 +45,7 @@
 
       </div>
       <div class="date-created">
-        <p>created {{user.created_at|dateCounter}}</p>
+        <p>created at {{user.created_at|date}} ({{user.created_at|dateCounter}})</p>
       </div>
       <div class="location">
         <i class="fa fa-map-marker-alt m-1"></i>

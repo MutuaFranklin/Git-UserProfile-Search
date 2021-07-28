@@ -1,6 +1,6 @@
 
 .repoForm{
-  width: 70%;
+  width: 100%;
 }
 .card{
   background: transparent;
@@ -46,7 +46,7 @@
 }
 
 .repo-details{
-  width: 86%;
+  width: 100%;
   margin-top: 20px;
   border: 1px solid rgb(90, 88, 88);
   line-height: 2;
@@ -88,7 +88,27 @@
 
 }
 
+.addition{
+  display: flex;
+  justify-content: space-between;
+  margin: 2px;
+  font-size: 13px;
+  color: grey;
+  font-weight: 500;
+}
+.language{
+  display: flex;
 
+}
+.language p{
+  margin-left: 5px;
+}
+.language .round{
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+  background-color: rgb(218, 213, 213);
+}
 
 @media only screen and (max-width: 600px) {
 
@@ -101,6 +121,65 @@
   line-height: 2;
   margin-bottom: 20px;
 
+}
+
+.userForm{
+  width:100%;
+  font-size: 8px;
+  height: 37px;
+  margin: 3px;
+
+
+}
+
+.repoForm input{
+  border: 2px solid #021a24;
+  width: 100%;
+  font-size: 15px;
+
+
+}
+
+.repoForm input::placeholder{
+  font-size: 13px;
+
+
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+
+
+
+.repoSearchBtn{
+  background-color: #020c22;
+  border: 1px solid white;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  height: 30px;
+  margin: 2px;
+  margin-left: 7px;
+
+}
+.repo-total{
+  border-radius: 40%;
+  width: 40px;
+  background-color: grey;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.repo-total p{
+  padding: 3px;
 }
 
 

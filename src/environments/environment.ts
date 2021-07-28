@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   apiUrl: 'https://api.github.com/users/',
   followersUrl: ' https://api.github.com/user/followers',
+  repoSearchUrl: 'https://api.github.com/search/repositories?q=',
   apikey: '?access_token=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 ',
   apiRepokey: '/repos?',
 };

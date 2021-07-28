@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
 // import { environment } from 'src/environments/environment';
 import { Repositories } from '../models/repositories';
+import { SearchRepo } from '../models/search-repo';
 import { UserProfile } from '../models/user-profile';
 
 @Injectable({
@@ -15,18 +16,27 @@ export class UserServiceService {
 
   user: UserProfile;
 
+  repoSearch: SearchRepo;
+
   items:any;
 
+  repoItems:any[]= [];
+
   public searchName !:string;
+  public repoName !:string;
+
 
 
 
   constructor(private http: HttpClient) {
     this.user = new UserProfile(" ", " ", " ", " ", " ", 0, " ", "","", new Date());
-    this.repo = new Repositories(" ", " ", " ", " ", "");
+    this.repo = new Repositories(" ", " ", " ", " ", [], new Date(), "");
+    this.repoSearch = new SearchRepo (0, []);
+
+    // this.repoSearch = new SearchRepo ("","","","",0,new Date());
    }
 
- 
+
   // on search event
   getUserData(searchName: string) {
     interface ApiResponse {
@@ -77,10 +87,14 @@ export class UserServiceService {
 
   getRepoInfo(searchName:string) {
     interface ApiResponse {
-      name: string;
-      homepage: string;
-      description: string;
-      html_url: string;
+      // name: string;
+      // homepage: string;
+      // description: string;
+      // html_url: string;
+      // language: [];
+      // created_at: Date;
+      total:number,
+      items:[]
 
     }
     this.http
@@ -91,4 +105,29 @@ export class UserServiceService {
 
       });
   }
+
+  searchRepoName(repoName:string) {
+    // interface ApiResponse {
+    //   name: string;
+    //   homepage: string;
+    //   description: string;
+    //   language: string;
+    //   html_url: string;
+
+    // }
+    this.http
+      .get<any>(environment.repoSearchUrl + repoName)
+      .subscribe(response => {
+        this.repoItems = response;
+        console.log(response)
+
+
+      });
+  }
+
+//   searchForRepository(repoName: string){
+//      console.log(this.http.get(` https://api.github.com/search/repositories?q=${repoName}`))
+
+//     return this.http.get(` https://api.github.com/search/repositories?q=${repoName}`);
+//   }
 }

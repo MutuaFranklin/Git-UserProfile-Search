@@ -2,15 +2,16 @@
   <ng-progress></ng-progress>
   <nav class="navbar navbar-light bg-light mb-3 ">
     <div class="container-fluid">
-      <a class="navbar-brand">GitScraperApp</a>
 
       <form class="d-flex m-2 userForm" >
+        <i class="fab fa-github-square"></i>
+
         <input type="text" class="form-control" name="repoName" required placeholder="Search a git repo" id="repoName" #repoName (keyup.enter)= "repoResults(repoName.value)" >
 
-        <button type="submit" class="btn userSearchBtn" >Search</button>
-        <div class="validate">
+        <button type="submit" class="btn userSearchBtn" (click) = "repoResults(repoName.value);" >Search</button>
+        <!-- <div class="validate">
           <p>Enter the search username !!</p>
-        </div>
+        </div> -->
       </form>
       <div class="nav-links">
         <a class="nav-link active" aria-current="page" routerLink="" routerLinkActive='active' >Profile</a>
@@ -20,7 +21,46 @@
 
   </nav>
 
+
+
 <div class="container-fluid repoResults">
+  <div class="header">
+
+  </div>
+  <div class="row">
+    <div class="col-md-7">
+      <div class="card text-center">
+        <div class="card-header">
+          <p>Repository search results</p>
+
+        </div>
+        <div class="card-body">
+          <!-- repo list -->
+          <div class="repo-list">
+            <div class="repo-list">
+              <div class="repo-details" *ngFor='let repo of searchRepo.items ; let i = index' >
+                <div class="repo-title" appBackgroundColor>
+                  <p>{{searchRepo.items.total}}</p>
+                  <p>Created at {{searchRepo.items.items.created_at}}</p>
+
+                  <a href="" target="_blank" class=""><button type="button" class="btn btn-warning repobtn ">View project repo on Github</button></a>
+                </div>
+                <div class="repo-description">
+                  <p>description</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
 
 </div>
 </div>

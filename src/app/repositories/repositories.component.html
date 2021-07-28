@@ -17,6 +17,20 @@
     </div>
     <div class="repo-description">
       <p> {{repoService.items[i].description}}</p>
+      <div class="addition">
+        <div class = "language">
+          <div class="round"></div>
+
+          <p> {{repoService.items[i].language}}</p>
+
+        </div>
+
+         <p> Created at {{repoService.items[i].created_at|date}}</p>
+
+      </div>
+
+
+
     </div>
   </div>
 </div>

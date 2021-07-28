@@ -37,6 +37,7 @@ export class ProfileComponent implements OnInit {
 
     }
   }
+  
   constructor(
     private http: HttpClient,
     private userService: UserServiceService,
