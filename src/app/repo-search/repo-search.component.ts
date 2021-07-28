@@ -11,6 +11,7 @@ import { UserServiceService } from '../services/user-service.service';
 export class RepoSearchComponent implements OnInit {
 
   repoList: any [] = [];
+  repoCount!: any;
 
 
   repoResults(repoName: string){
@@ -30,7 +31,18 @@ export class RepoSearchComponent implements OnInit {
         console.log(response)
 
       }, (error: any) =>{
-        this.searchRepo.getUserData('');
+        this.searchRepo.getUserData('portfolio');
+      }
+    )
+  }
+  findTotalRepos(input:string){
+    this.searchRepo.searchRepoName(input).toPromise().then(
+      (response:any) => {
+        this.repoCount = response;
+        console.log(response)
+
+      }, (error: any) =>{
+        this.searchRepo.getUserData('portfolio');
       }
     )
   }
@@ -39,6 +51,29 @@ export class RepoSearchComponent implements OnInit {
   constructor( private http: HttpClient, private searchRepo: UserServiceService) { }
 
   ngOnInit(): void {
+
+    this.findRepo('portfolio');
+
+    // console.log(this.follower)
+    $('.userForm .userSearchBtn').on('click', function () {
+      $('.userForm').find('input').val('');
+
+      if (!$(".userForm input#searchName").val()){
+        // $(".validate").fadeIn(1000);
+
+        $(".onSearch").css("display", "flex");
+
+
+      }
+      else{
+        // alert("Search username required!")
+        // $(".validate").fadeOut();
+
+      }
+
+    });
+
+      
 
   }
 

@@ -87,13 +87,6 @@ export class UserServiceService {
 
   getRepoInfo(searchName:string) {
     interface ApiResponse {
-      // name: string;
-      // homepage: string;
-      // description: string;
-      // html_url: string;
-      // language: [];
-      // created_at: Date;
-      total:number,
       repos:[]
 
     }
@@ -110,19 +103,7 @@ export class UserServiceService {
 
     return this.http.get(` https://api.github.com/search/repositories?q=${repoName}`);
 
-    // this.http
-    //   .get<any>(environment.repoSearchUrl + repoName)
-    //   .subscribe(response => {
-    //     this.repoItems = response.items;
-    //     console.log(response)
 
-
-    //   });
   }
 
-//   searchForRepository(repoName: string){
-//      console.log(this.http.get(` https://api.github.com/search/repositories?q=${repoName}`))
-
-//     return this.http.get(` https://api.github.com/search/repositories?q=${repoName}`);
-//   }
 }

@@ -74,6 +74,7 @@ export class ProfileComponent implements OnInit {
       }
 
     });
+    
     $('li .repo-link').on('click', function () {
       $(".repo-list").fadeIn(1000);
       $(".followers-list").hide();
