@@ -56,25 +56,27 @@ export class ProfileComponent implements OnInit {
     this.searchResults('MutuaFranklin');
 
 
-    // console.log(this.follower)
-    $('.userForm .userSearchBtn').on('click', function () {
-      $('.userForm').find('input').val('');
 
-      if (!$(".userForm input#searchName").val()){
-        // $(".validate").fadeIn(1000);
+
+    $('.userForm .userSearchBtn').on('click', function () {
+
+      if(!$(".userForm input#searchName").val()){
+        $(".validate").fadeIn(1000);
 
         $(".onSearch").css("display", "flex");
 
 
       }
       else{
-        // alert("Search username required!")
-        // $(".validate").fadeOut();
+        $(".validate").fadeOut();
 
       }
+      
+      $('.userForm').find('input').val('');
+
 
     });
-    
+
     $('li .repo-link').on('click', function () {
       $(".repo-list").fadeIn(1000);
       $(".followers-list").hide();

@@ -107,7 +107,9 @@ input::placeholder{
 
 
 }
+
 .validate{
+  width: 100%;
   display: flex;
   padding-top: 12px;
   color: red;

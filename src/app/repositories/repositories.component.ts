@@ -14,6 +14,8 @@ export class RepositoriesComponent implements OnInit {
   user!:UserProfile
   repo!:Repositories
   searchName!: string
+  repoTitle!: string
+  repos!:[]
 
   searchResults(searchName: string){
     if (searchName !== ''){
@@ -24,6 +26,16 @@ export class RepositoriesComponent implements OnInit {
 
     }
   }
+
+  searchLocalRepo(repoTitle: string){
+    this.repoService = this.repoService.filter((response:any) =>{
+          return this.repos = response.name()
+
+    })
+
+  }
+
+
 
   constructor(
     private http: HttpClient,

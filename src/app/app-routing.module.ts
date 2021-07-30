@@ -7,7 +7,7 @@ import { RepoSearchComponent } from './repo-search/repo-search.component';
 const routes: Routes = [
   { path: '', component: ProfileComponent},
   { path: 'repositories', component: RepoSearchComponent},
-  { path:'**', component: NotFoundComponent},
+  { path:'err', component: NotFoundComponent},
 
 ];
 

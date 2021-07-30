@@ -10,6 +10,9 @@ import { UserProfile } from '../models/user-profile';
   providedIn: 'root'
 })
 export class UserServiceService {
+  filter(arg0: (response: any) => any): UserServiceService {
+    throw new Error('Method not implemented.');
+  }
 
 
   repo: Repositories;
@@ -97,6 +100,10 @@ export class UserServiceService {
         // console.log(response)
 
       });
+  }
+
+  searchLocalRepo(repoTitle:string){
+    return this.http.get(` https://api.github.com/users/{user}/repos{?type,page,per_page,sort}`)
   }
 
   searchRepoName(repoName:string) {

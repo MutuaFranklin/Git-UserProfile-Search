@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 import { SearchRepo } from '../models/search-repo';
 import { UserServiceService } from '../services/user-service.service';
 
@@ -25,16 +26,31 @@ export class RepoSearchComponent implements OnInit {
 
 
   findRepo(input:string){
-    this.searchRepo.searchRepoName(input).toPromise().then(
-      (response:any) => {
-        this.repoList = response.items;
-        console.log(response)
+    let promise = new Promise((resolve, reject) => {
+      this.searchRepo.searchRepoName(input).toPromise().then(
+        (response:any) => {
+          this.repoList = response.items;
+          console.log(response)
 
-      }, (error: any) =>{
-        this.searchRepo.getUserData('portfolio');
-      }
-    )
+          resolve(response);
+
+        },
+
+        (error) => {
+          if (error.status) {
+            // this.router.navigate(["/err"]);
+          }
+
+          reject(error);
+        }
+        );
+    });
+    return promise;
   }
+
+
+
+
   findTotalRepos(input:string){
     this.searchRepo.searchRepoName(input).toPromise().then(
       (response:any) => {
@@ -42,38 +58,34 @@ export class RepoSearchComponent implements OnInit {
         console.log(response)
 
       }, (error: any) =>{
-        this.searchRepo.getUserData('portfolio');
+        this.searchRepo.getUserData('');
       }
     )
   }
 
 
-  constructor( private http: HttpClient, private searchRepo: UserServiceService) { }
+  constructor( private http: HttpClient, private searchRepo: UserServiceService, private router: Router) { }
 
   ngOnInit(): void {
 
     this.findRepo('portfolio');
 
-    // console.log(this.follower)
     $('.userForm .userSearchBtn').on('click', function () {
-      $('.userForm').find('input').val('');
 
-      if (!$(".userForm input#searchName").val()){
-        // $(".validate").fadeIn(1000);
-
-        $(".onSearch").css("display", "flex");
-
+      if(!$(".userForm input#repoName").val()){
+        $(".validate").fadeIn(1000);
 
       }
       else{
-        // alert("Search username required!")
-        // $(".validate").fadeOut();
+        $(".validate").fadeOut();
 
       }
 
+      $('.userForm').find('input').val('');
+
+
     });
 
-      
 
   }
 

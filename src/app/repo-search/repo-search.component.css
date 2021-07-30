@@ -64,10 +64,6 @@
   color: rgba(233, 134, 4, 0.9) !important;
   /* background-color: rgba(82, 69, 90, 0.5); */
 
-
-
-
-
 }
 
 .userForm input{
@@ -79,6 +75,7 @@
 
 
 }
+
 form h4{
   font-size: 18px;
   padding-top: 5px;
@@ -92,11 +89,19 @@ input::placeholder{
   font-size: 13px;
   color:white !important ;
 
-
-
 }
 
 
+.validate{
+  width: 100%;
+  display: flex;
+  padding-top: 12px;
+  color: red;
+  font-weight: bold;
+  margin-left:5px ;
+  height: auto;
+  display: none;
+}
 .row{
   display: flex;
   justify-content: center;
@@ -119,6 +124,11 @@ input::placeholder{
 
 .card-header{
     background-color: rgba(82, 69, 90, 0.5);
+    font-size: 15px;
+    font-weight: bold;
+    color: rgba(233, 134, 4, 0.9) !important;
+
+
 
 }
 
